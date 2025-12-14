@@ -54,8 +54,12 @@ Ferramenta para integrar e analisar dados públicos sobre a inclusão de estudan
 
 ## Fontes de Dados
 
-- [INEP/Censo Escolar](https://basedosdados.org/dataset/br-inep-censo-escolar)
-- [IBGE/PNAD](https://servicodados.ibge.gov.br/api/docs/agregados)
+INEP – Microdados Censo Escolar:
+https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar
+IBGE – API Agregados (SIDRA):
+https://servicodados.ibge.gov.br/api/docs/agregados
+PNAD Contínua – Pessoas com Deficiência:
+https://storymaps.arcgis.com/stories/3bd6ed4338a44cf5b0124a555bcb5490
 
 ## Scripts SQL e OLAP
 
