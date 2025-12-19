@@ -1,4 +1,3 @@
-
 -- Dimensões
 CREATE TABLE IF NOT EXISTS dim_localidade (
   cod_municipio_ibge VARCHAR(7) PRIMARY KEY,

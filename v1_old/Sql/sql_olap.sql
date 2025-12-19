@@ -1,4 +1,3 @@
-
 -- 1) Matrículas (auditivas) por UF e ano, com totais (ROLLUP)
 SELECT e.sigla_uf,
        fm.ano,

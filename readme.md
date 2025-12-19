@@ -30,11 +30,11 @@ Ferramenta para integrar e analisar dados públicos sobre a inclusão de estudan
 
 ## Paleta de Cores
 
-| Nome         | Hex      |
-|--------------|----------|
-| Azul Senac   | #004A8D  |
-| Laranja      | #F7941D  |
-| Laranja Claro| #FDC180  |
+| Nome          | Hex     |
+| ------------- | ------- |
+| Azul Senac    | #004A8D |
+| Laranja       | #F7941D |
+| Laranja Claro | #FDC180 |
 
 ## Como Executar
 
@@ -46,19 +46,29 @@ Ferramenta para integrar e analisar dados públicos sobre a inclusão de estudan
 
 ## Tecnologias
 
-- Node.js
-- Express
-- MySQL
-- Bootstrap
-- Chart.js
+FRONT END
+-Html + Css + Bootstrap + JavaScript + Chart.js
 
-## Fontes de Dados
+BACK END
 
-INEP – Microdados Censo Escolar:
+- Node.js + TypeScript + Express
+
+BANCO DE DADOS
+-Postgree (Via Docker Compose v2)
+
+## Referências Oficiais
+
+• Docker Desktop + WSL2 no Windows (instalação/uso)
+
+• Compose v2 (use docker compose, não docker-compose)
+
+• INEP – Microdados Censo Escolar (dados abertos)
 https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar
-IBGE – API Agregados (SIDRA):
+
+• IBGE – API de Agregados (SIDRA v3)
 https://servicodados.ibge.gov.br/api/docs/agregados
-PNAD Contínua – Pessoas com Deficiência:
+
+• PNAD Contínua 2022 – Pessoas com Deficiência
 https://storymaps.arcgis.com/stories/3bd6ed4338a44cf5b0124a555bcb5490
 
 ## Scripts SQL e OLAP
@@ -67,7 +77,8 @@ Scripts e exemplos de consultas em `/sql`
 
 ## Autores
 
-Projeto Integrador Desenvolvido Pelo Grupo 04 - Curso Tecnólogo em Banco de Dados  
+Projeto Integrador Desenvolvido Pelo Grupo 04 - Curso Tecnólogo em Banco de Dados
+
 [Christiano Miguel Samori de Azevedo](https://github.com/ChristianoMiguelSamorideAzevedo)
 
 [André Felipe Dantas Medeiros](https://github.com/AndreFelipeDantasMedeiros)
