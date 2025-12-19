@@ -1,12 +1,8 @@
 import express from 'express';
+import alunosRoutes from './routes/alunosRoutes';
 
 const app = express();
-const port = 3000;
+app.use(express.json());
+app.use('/api', alunosRoutes);
 
-app.get('/health', (req, res) => {
-  res.json({ status: 'ok' });
-});
-
-app.listen(port, () => {
-  console.log(`API rodando na porta ${port}`);
-});
+app.listen(3000, () => console.log('API rodando na porta 3000'));

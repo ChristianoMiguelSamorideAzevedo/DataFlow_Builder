@@ -1,0 +1,5 @@
+### Teste /health
+GET http://localhost:3000/health
+
+### Teste /alunos
+GET http://localhost:3000/api/alunos
