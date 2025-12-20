@@ -1,3 +1,20 @@
+# DataFlowBuilder – Inclusão Auditiva na Educação (ETL → PostgreSQL → API → Front → OLAP)
+
+**Objetivo:** integrar dados públicos (INEP, IBGE, PNAD) para analisar a inclusão de alunos com surdez, deficiência auditiva e surdocegueira na educação básica, expondo uma API e um dashboard com indicadores estratégicos (principal: relação intérprete por aluno), seguindo a paleta institucional do Senac e a identidade visual do projeto.
+
+> Arquitetura de alto nível:
+> **ETL (Node/TypeScript)** → **PostgreSQL (Docker)** → **API (Express/TS)** → **Front-end (HTML/CSS/Bootstrap/Chart.js)** → **OLAP (SQL com ROLLUP/CUBE)**.
+
+---
+
+## 🔧 Tecnologias
+
+- **Back-end / ETL:** Node.js 20, TypeScript, Express
+- **Banco de dados (DW/ROLAP):** PostgreSQL 15 (via Docker Compose v2)
+- **Front-end:** HTML, CSS, Bootstrap 5, Chart.js
+- **Containerização:** Docker Desktop + WSL2 (Windows)
+- **Governança:** README detalhado, evidências de consultas OLAP e versionamento no GitHub
+
 # Senac DataFlowBuilder
 
 ![Senac DataFlowBuilder](img/logo1.png)
@@ -27,6 +44,7 @@ Ferramenta para integrar e analisar dados públicos sobre a inclusão de estudan
 - Dashboards responsivos
 - Relatórios dinâmicos
 - Recomendações automáticas
+  http://127.0.0.1:5501/v2/FrontEnd/index.html
 
 ## Paleta de Cores
 

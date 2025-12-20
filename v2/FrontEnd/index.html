@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>DataFlow Builder</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #f58220; /* laranja Senac aproximado */
+      color: #ffffff;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 32px auto;
+      background: #ffffff;
+      padding: 24px 32px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 24px;
+    }
+
+    h2 {
+      color: #004b8d; /* azul Senac aproximado */
+      margin-top: 0;
+    }
+
+    #lista-alunos {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+
+    #lista-alunos li {
+      padding: 10px 12px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #lista-alunos li:nth-child(odd) {
+      background: #fafafa;
+    }
+
+    .badge {
+      background: #004b8d;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 16px;
+      border-radius: 6px;
+      background: #f9fafb;
+      border: 1px solid #e0e0e0;
+    }
+
+    label {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    input {
+      padding: 8px 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+    }
+
+    button {
+      margin-top: 8px;
+      padding: 10px 14px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      background: #004b8d;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background: #0360b8;
+    }
+
+    .status {
+      margin-top: 4px;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    footer {
+      max-width: 960px;
+      margin: 8px auto 24px;
+      font-size: 0.8rem;
+      color: #666;
+      text-align: right;
+      padding: 0 8px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <!-- coloca sua logo do projeto aqui -->
+      <img src="/v2/img/logo1.png" alt="DataFlow Builder" />
+      <h1>DataFlow Builder</h1>
+    </div>
+    <span>Senac · Projeto Integrador Banco de Dados</span>
+  </header>
+
+  <main>
+    <section>
+      <h2>Alunos cadastrados</h2>
+      <ul id="lista-alunos"></ul>
+    </section>
+
+    <section>
+      <h2>Novo aluno</h2>
+      <form id="form-aluno" onsubmit="return false;">
+        <label for="nome">Nome do aluno</label>
+        <input id="nome" placeholder="Ex: Maria Silva" />
+        <button id="btn-criar">Criar aluno</button>
+        <div class="status" id="status"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    DataFlow Builder · Integração com API Node/Express (GET/POST /api/alunos)
+  </footer>
+
+  <script>
+    const API = 'http://localhost:3000/api/alunos';
+
+    async function carregarAlunos() {
+      try {
+        const resp = await fetch(API);
+        const data = await resp.json();
+        const ul = document.getElementById('lista-alunos');
+        ul.innerHTML = '';
+
+        data.alunos.forEach(a => {
+          const li = document.createElement('li');
+          const nome = document.createElement('span');
+          nome.textContent = a.nome;
+
+          const id = document.createElement('span');
+          id.className = 'badge';
+          id.textContent = '#' + a.i
