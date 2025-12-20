@@ -60,7 +60,27 @@ Ferramenta para integrar e analisar dados públicos sobre a inclusão de estudan
 2. Instale dependências com `npm install`
 3. Configure o banco de dados MySQL no arquivo `.env`
 4. Rode o backend com `node app.js`
-5. Abra o `frontend/index.html` no navegador
+5. Abra o `frontend/index.html` no navegador.
+
+> **Sempre no terminal do VS Code, na pasta raiz `Senac_DataFlowBuilder/`.**
+
+1)Subir o banco (PostgreSQL com Docker)
+powershell
+docker compose -f .\v2\docker\docker-compose.yml up -d
+docker ps # deve mostrar dfb_postgres Up e porta 5432
+
+## ✅ Pré-requisitos
+
+- **Windows + VS Code** com terminal PowerShell integrado
+- **Docker Desktop** com **WSL2** habilitado
+
+  - Teste no terminal:  
+    powershell
+    docker --version
+    docker compose version
+
+- **Node.js 20+** (para ETL/API)
+- **Sem `psql` no Windows?** Tudo aqui usa **`docker exec`** (rodando `psql` dentro do container).
 
 ## Tecnologias
 
