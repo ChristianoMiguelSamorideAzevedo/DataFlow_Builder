@@ -115,12 +115,8 @@ Scripts e exemplos de consultas em `/sql`
 
 ## Autores
 
-Projeto Integrador Desenvolvido Pelo Grupo 04 - Curso Tecnólogo em Banco de Dados
+Projeto Integrador Desenvolvido no Curso Tecnólogo em Banco de Dados
 
 [Christiano Miguel Samori de Azevedo](https://github.com/ChristianoMiguelSamorideAzevedo)
 
-[André Felipe Dantas Medeiros](https://github.com/AndreFelipeDantasMedeiros)
 
-[Anderson Belarmino Santana](https://github.com/AndersonBelarminoSantana)
-
-[Fernanda Alvarez Malvino](https://github.com/FernandaAlvarezMalvino)
