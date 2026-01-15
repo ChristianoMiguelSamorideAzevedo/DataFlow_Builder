@@ -32,7 +32,7 @@ API para análise de dados públicos sobre inclusão e acessibilidade na educaç
 - [Tecnologias](#tecnologias)
 - [Fontes de Dados](#fontes-de-dados)
 - [Scripts SQL e OLAP](#scripts-sql-e-olap)
-- [Autores](#autores)
+- [Autor](#autor)
 
 ## Sobre o Projeto
 
@@ -113,7 +113,7 @@ https://storymaps.arcgis.com/stories/3bd6ed4338a44cf5b0124a555bcb5490
 
 Scripts e exemplos de consultas em `/sql`
 
-## Autores
+## Autor
 
 Projeto Integrador Desenvolvido no Curso Tecnólogo em Banco de Dados
 
